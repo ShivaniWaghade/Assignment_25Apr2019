@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="myFunc();">Click to highlight the paragraph.</button>
+<p>“You’re only here for a short visit. <b>Don’t hurry, don’t worry.</b> And be sure to smell the flowers along the way.” — <b>Walter Hagen</b> </p>
+
+<script type="text/javascript">
+	function myFunc()
+	{
+	var x = document.getElementsByTagName("B");
+	for (var i = 0; i < x.length; i++) {
+		document.getElementsByTagName("B")[i].style.backgroundColor = "#B0E0E6";
+	}
+	}
+
+</script>
+</body>
+</html>

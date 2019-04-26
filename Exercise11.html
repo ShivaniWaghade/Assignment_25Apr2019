@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>occurence of a substring</title>
+</head>
+<body>
+<input type="text" id="str" placeholder="Enter a string">
+<input type="text" id="sub_str" placeholder="Enter a substring to find its occurrence">
+<input type="submit" onclick="occ();">
+<h1 id="showocc"></h1>
+<script type="text/javascript">
+	function occ()
+	{
+		var str=document.getElementById('str').value;//get the value
+		var s_str=document.getElementById('sub_str').value;
+		var arr=str.split(' ');
+		var count=0;
+		for(var i=0; i<str.length; i++)
+		{
+			if (arr[i]==s_str) 
+			{
+				count=count+1;
+			}
+		}
+		if (count==0) 
+		{
+			document.getElementById('showocc').innerHTML="Word is not present in the string";
+		}
+		else
+		{
+			document.getElementById('showocc').innerHTML="Word "+s_str+" occurs "+ count+" times";
+		}
+	}
+</script>
+</body>
+</html>
