@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</html>
+	<title>Take a prompt input from user and replace the body content with new data</title>
+</head>
+<body>
+	<h2>Click to change the body content with your data.</h2>
+	<button onclick="changeContent();">Click here!</button>
+	<script type="text/javascript">
+		function changeContent()
+		{
+			var x = prompt("Enter new text to display on the body.")
+			document.body.innerHTML="<h2>"+x+"</h2>";
+		}
+	</script>
+</body>
+</html>
