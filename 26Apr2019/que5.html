@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable the combo dropdown on click of a button</title>
+</head>
+<body>
+	<h1 style="color: #003333">Click to disable the combo dropdown</h1>
+	<label>Select City: </label>
+	<select id="change" >
+  		<option value="Nagpur">Nagpur</option>
+  		<option value="Pune">Pune</option>
+  		<option value="Mumbai">Mumbai</option>
+  		<option value="Bangalore">Bangalore</option>
+	</select>
+	<br><br>
+	<button onclick="myFunc();">Click here!</button>
+
+	<script type="text/javascript">
+		function myFunc() 
+		{
+			if(document.getElementById('change').disabled == true) 
+				document.getElementById('change').disabled = false;
+			else
+				document.getElementById('change').disabled = true;
+		}
+	</script>
+</body>
+</html>

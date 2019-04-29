@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create n number of text boxes dynamically</title>
+	<style type="text/css">
+		div{
+			padding-left: 30px;
+		}
+	</style>
+</head>
+<body>
+	<p style="color: #003333; font-size: 30px;">Click to insert new text boxes.</p>
+	<button onclick="createBoxes();">Click here!</button>
+	<div id="textboxes">
+	</div>
+	<script type="text/javascript">
+		function createBoxes()
+		{
+			var num=prompt("Enter number of boxes to be created.")
+			for(var i=0; i<num; i++)
+			{
+				document.getElementById('textboxes').innerHTML += '<br>'+'Text Box No. '+(i+1)+' <input type="text" placeholder="new textbox">'+'<br>';
+			}
+		}
+	</script>
+</body>
+</html>
