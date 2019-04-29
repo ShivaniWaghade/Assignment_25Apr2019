@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>longest word within the string</title>
+</head>
+<body>
+	<button onclick="myFun();">Click to enter string and find longest word in the string:</button>
+
+	<div id="longString">
+	
+	</div>
+
+	<script type="text/javascript">
+		function myFun()
+		{
+		// alert("hello");
+		var s=prompt("Enter a string:");
+		var arr = s.split(' ');
+		var max_len=arr[0].length;
+		var long=arr[0];
+		for(var i=0;i<arr.length;i++)
+		{
+			if (arr[i].length > max_len) 
+			{
+				max_len=arr[i].length;
+				long=arr[i];
+			}
+		}
+		//console.log(arr2);
+		document.getElementById('longString').innerHTML = "orginal string: "+ s + "<br>";
+
+		document.getElementById('longString').innerHTML += "longest string: "+ long + "<br>";
+		//document.getElementById('upperString').innerHTML += "Sorted string: "+ arr2 + "<br>";
+		}
+	</script>
+</body>
+</html>

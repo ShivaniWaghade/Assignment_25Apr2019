@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Merged arrays with no duplicates</title>
+</head>
+<body>
+	<input type="text" id="arr1" placeholder="Enter an array 1">
+	<input type="text" id="arr2" placeholder="Enter an array 2">
+	<input type="submit" onclick = "mergeNoRepeat();">
+	<h1 id="show_arr"></h1>
+	<script type="text/javascript">
+		function mergeNoRepeat()
+		{
+			var arr1=document.getElementById('arr1').value;
+			var arr2=document.getElementById('arr2').value;
+			var newarr1=arr1.split(',');
+			var newarr2=arr2.split(',');
+			var flag;
+			var marr=[];
+			for(var i=0; i<newarr1.length; i++)
+			{
+				marr[i]=newarr1[i];
+			}
+			len=newarr1.length;
+			document.getElementById('show_arr').innerHTML="Merged arrays with no duplicates: "+ "<br>";
+			for(var i=0; i<newarr2.length; i++)
+			{
+				flag=0;
+				for(var j=0; j<len; j++)
+				{
+					if (marr[j]==newarr2[i]) 
+					{
+						flag=1;
+						break;
+					}
+				}
+				if (flag==0) 
+				{
+					marr[len]=newarr2[i];
+					len++;
+					
+				}
+
+			}
+			document.getElementById('show_arr').innerHTML+= marr;
+
+		}
+	</script>
+</body>
+</html>
