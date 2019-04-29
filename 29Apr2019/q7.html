@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change button text on click!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+	</style>
+<button id="btn">Click!</button>
+<script type="text/javascript">
+	$(document).ready(function() 
+	{
+		$('#btn').click(function() {
+			$('#btn').text('Update');
+		});
+		
+	});
+</script>
+</body>
+</html>
