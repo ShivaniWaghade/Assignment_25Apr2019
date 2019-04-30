@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On right click inside a div, make the div box larger.</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<style type="text/css">
+		div{
+			display: block;
+			height: 100px;
+			width: 100px;
+			background-color: pink;
+			font-size: 20px;
+		}
+	</style>
+	<h3>Right click inside a div to make it larger.</h3>
+	<div id="div1">
+		<p>Some text here...</p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$('#div1').mousedown(function(event) {
+			if (event.which==3) 
+				{
+					$(this).animate({
+						height: '300px',
+						width: '300px'},
+						3000); 
+
+				} else 
+				{
+					alert('Right click on the div to expand it!');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
